@@ -82,7 +82,7 @@
                                 <ul class="d-flex align-items-center">
                                     <li class="mr-15">
                                         <div class="nav-search search-switch">
-                                            <i class="ti-search"></i>
+                                            <i class="ti-search" onclick="enableSearch()"></i>
                                         </div>
                                     </li>
                                     <li>
@@ -122,7 +122,7 @@
                         <ul class="d-flex align-items-center">
                             <li class="mr-15">
                                 <div class="nav-search search-switch">
-                                    <i class="ti-search"></i>
+                                    <i class="ti-search" onclick="enableSearch()"></i>
                                 </div>
                             </li>
                             <li>
@@ -638,22 +638,32 @@
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="search-close-btn">+</div>
         <form class="search-model-form" action="shop.html">
-            <input type="text" id="search-input" placeholder="Searching key.....">
+            <input type="text" id="search-input" placeholder="Searching key....." disabled>
         </form>
     </div>
 </div>
 <!-- Search model end -->
+
 <!-- Scroll Up -->
 <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
-<!-- JS here -->
+
 <!-- Jquery, Popper, Bootstrap -->
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
+
+<!-- JS here -->
+<script type="text/javascript">
+  function enableSearch() {
+    setTimeout(() => {
+        document.getElementById('search-input').disabled = false
+    }, Math.floor(Math.random() * 2000) + 100);
+  }
+</script>
 
 <!-- Slick-slider , Owl-Carousel ,slick-nav -->
 <script src="./assets/js/owl.carousel.min.js"></script>

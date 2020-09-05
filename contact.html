@@ -96,7 +96,7 @@
                   <ul class="d-flex align-items-center">
                     <li class="mr-15">
                       <div class="nav-search search-switch">
-                        <i class="ti-search"></i>
+                        <i class="ti-search" onclick="enableSearch()"></i>
                       </div>
                     </li>
                     <li>
@@ -1976,6 +1976,7 @@
             type="text"
             id="search-input"
             placeholder="Searching key....."
+            disabled
           />
         </form>
       </div>
@@ -1992,6 +1993,15 @@
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- JS here -->
+    <script type="text/javascript">
+      function enableSearch() {
+        setTimeout(() => {
+          document.getElementById('search-input').disabled = false;
+        }, Math.floor(Math.random() * 2000) + 100);
+      }
+    </script>
 
     <!-- Slick-slider , Owl-Carousel ,slick-nav -->
     <script src="./assets/js/owl.carousel.min.js"></script>
