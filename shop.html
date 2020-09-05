@@ -31,7 +31,7 @@
   </head>
   <body class="full-wrapper">
     <!-- ? Preloader Start -->
-    <div id="preloader-active">
+    <!-- <div id="preloader-active">
       <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
           <div class="preloader-circle"></div>
@@ -40,7 +40,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Preloader Start-->
     <header>
       <!-- Header Start -->
@@ -61,10 +61,10 @@
                 <div class="main-menu d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="shop.html">shop</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li>
+                      <li id="home-link"><a href="index.html">Home</a></li>
+                      <li id="shop-link"><a href="shop.html">shop</a></li>
+                      <li id="about-link"><a href="about.html">About</a></li>
+                      <li id="blog-link">
                         <a href="blog.html">Blog</a>
                         <ul class="submenu">
                           <li><a href="blog.html">Blog</a></li>
@@ -75,7 +75,9 @@
                           </li>
                         </ul>
                       </li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li id="contact-link">
+                        <a href="contact.html">Contact</a>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -134,7 +136,7 @@
         </div>
       </div>
       <!-- listing Area Start -->
-      <div class="category-area">
+      <div id="category-area" style="visibility: hidden">
         <div class="container">
           <div class="row">
             <div class="col-xl-7 col-lg-8 col-md-10">
@@ -438,7 +440,7 @@
                 <!-- Button -->
                 <div class="row justify-content-center">
                   <div class="room-btn mt-20">
-                    <a href="catagori.html" class="border-btn">Browse More</a>
+                    <a href="shop.html" class="border-btn">Browse More</a>
                   </div>
                 </div>
               </div>
@@ -693,6 +695,11 @@
     </div>
 
     <!-- JS here -->
+    <script type="text/javascript">
+      setTimeout(() => {
+        document.getElementById('category-area').style.visibility = 'visible';
+      }, Math.floor(Math.random() * 2000) + 100);
+    </script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
