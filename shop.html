@@ -697,8 +697,19 @@
 
     <!-- JS here -->
     <script type="text/javascript">
+      let favoriteItemsList = document.getElementsByClassName('favorit-items');
+      for (let item of favoriteItemsList) {
+        item.style.visibility = 'hidden';
+      }
+
       setTimeout(() => {
         document.getElementById('category-area').style.visibility = 'visible';
+        let favoriteItemsList = document.getElementsByClassName(
+          'favorit-items'
+        );
+        for (let item of favoriteItemsList) {
+          item.style.visibility = 'visible';
+        }
       }, Math.floor(Math.random() * 2000) + 100);
     </script>
     <!-- Jquery, Popper, Bootstrap -->
